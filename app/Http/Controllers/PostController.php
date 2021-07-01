@@ -7,11 +7,13 @@ use App\Models\Post;
 use Illuminate\Support\Facades\Storage;
 class PostController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth']);
+    }
     public function index(){
-        $posts=Post::paginate(6);
-        return view('posts.index',[
-            'posts'=>$posts
-        ]);
+        
+        return view('posts.index');
 
     }
     public function store(Request $request){

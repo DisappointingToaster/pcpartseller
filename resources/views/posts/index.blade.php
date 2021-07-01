@@ -31,18 +31,6 @@
             </form>
 
 
-            @if($posts->count())
-                @foreach ($posts as $post)
-                    <div class="mb-4">
-                        <a href="" class="font-bold">{{$post->user->username}}</a>   <span class="text-gray-600 text-sm">{{$post->created_at->diffForHumans()}}</span>
-                        <p class="mb-2">{!!nl2br(e($post->body))!!} </p>
-                    </div>
-                    <img src="{{asset('images/'.$post->url)}}" alt="funny image">
-                @endforeach
-                {{$posts->links()}}
-            @else
-                <p>There are no posts</p>
-            @endif
         </div>
     </div>
 

@@ -1,11 +1,13 @@
 <?php
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/','App\Http\Controllers\HomeController@index')->name('home');
 
-Route::get('dashboard','App\Http\Controllers\DashboardController@index')->name('dashboard');
+Route::get('users/{user:username}/posts','App\Http\Controllers\UserPostController@index')->name('users.posts');
+
+Route::get('dashboard/{user:username}','App\Http\Controllers\DashboardController@index')->name('dashboard');
+Route::delete('dashboard/{post}','App\Http\Controllers\DashboardController@destroy')->name('dashboard.destroy');
+
 
 Route::post('logout','App\Http\Controllers\LogoutController@deauth')->name('logout');
 
