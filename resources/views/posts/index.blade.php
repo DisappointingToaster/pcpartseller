@@ -8,7 +8,7 @@
                 <div class="mb-4">
                     <label for="body" class="sr-only">Body</label>
                     <textarea name="body" id="body" cols="30" rows="4" class="bg-gray-100 border-2 w-full 
-                    p-4 rounded-lg @error('body') border-red-500 @enderror" placeholder="Your text here!"></textarea>
+                    p-4 rounded-lg @error('body') border-red-500 @enderror" placeholder="{{ __('lang.textfield') }}"></textarea>
 
                     @error('body')
                         <div class="text-red-500 mt-2 text-sm">
@@ -18,7 +18,7 @@
                 </div>
 
                 <div class="flex">
-                    <label for="image" class="px-3">Choose Image:</label>
+                    <label for="image" class="px-3">{{ __('lang.imageSelect') }}</label>
                     <input id="image" type="file" name="image"> 
                 </div>
                 @error('image')
@@ -27,7 +27,7 @@
                 </div>
                 @enderror
             
-                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded font-medium">Post</button>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded font-medium">{{ __('lang.postPost') }}</button>
             </form>
 
 

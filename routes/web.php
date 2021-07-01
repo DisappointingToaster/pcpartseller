@@ -1,6 +1,6 @@
 <?php
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\App;
 Route::get('/','App\Http\Controllers\HomeController@index')->name('home');
 
 Route::get('users/{user:username}/posts','App\Http\Controllers\UserPostController@index')->name('users.posts');
@@ -21,4 +21,6 @@ Route::post('register','App\Http\Controllers\RegisterController@store');
 
 Route::get('posts','App\Http\Controllers\PostController@index')->name('posts');
 Route::post('posts','App\Http\Controllers\PostController@store');
+
+Route::get('/lang/{lang}', 'App\Http\Controllers\LocalizationController@index');
 

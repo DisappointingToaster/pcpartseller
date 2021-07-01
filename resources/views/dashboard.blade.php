@@ -9,18 +9,19 @@
                     <div class="mb-4">
                         <a href="{{route('users.posts',$post->user)}}" class="font-bold">{{$post->user->username}}</a>   <span class="text-gray-600 text-sm">{{$post->created_at->diffForHumans()}}</span>
                         <div class="flex mx-5">
-                            <img src="{{asset('images/'.$post->url)}}" alt="funny image" height="480px" width="480px">
+                            <img src="{{asset('images/'.$post->url)}}" alt="funny image" height="360px" width="360px">
                             <p class="mb-2 px-6">{!!nl2br(e($post->body))!!} </p>
                             
-                            
+                        </div>
+                        <div class="flex">
                             <form action="{{route('dashboard.destroy',$post)}}" method="post">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="text-blue-500 ">Delete</button>
+                                <button type="submit" class="text-blue-500 p-3">{{ __('lang.delete') }}</button>
                             </form>
                             <form action="{{route('dashboard.edit',$post)}}" method="get">
                                 @csrf
-                                <button type="submit" class="text-blue-500 ">Edit</button>
+                                <button type="submit" class="text-blue-500 p-3">{{ __('lang.edit') }}</button>
                             </form>
                         </div>
                     </div>
