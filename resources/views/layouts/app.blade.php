@@ -4,12 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="XU-A-Compatible" content="ie=edge">
-        <title>Generic PC part seller</title>
+        <title>Sludinājumu site</title>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
 
     <body class='bg-gray-900' >
-        <nav class="p-6 bg-green-800 flex justify-between mb-3">
+        <nav class="p-6 bg-green-800 flex justify-between mb-3 text-white">
             <ul class="flex items-center">
                 <li>
                     <a href="/" class="p-3">{{ __('lang.home') }}</a>
@@ -24,6 +24,7 @@
                 </li>
                 
             </ul>
+            <p class="text-white">NekadNeredzetiSludinajumi</p>
             @php $locale = session()->get('locale'); @endphp
             <div class="flex" id="navbarToggler">
                 <ul class="navbar-nav ml-auto">
