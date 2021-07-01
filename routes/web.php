@@ -7,7 +7,8 @@ Route::get('users/{user:username}/posts','App\Http\Controllers\UserPostControlle
 
 Route::get('dashboard/{user:username}','App\Http\Controllers\DashboardController@index')->name('dashboard');
 Route::delete('dashboard/{post}','App\Http\Controllers\DashboardController@destroy')->name('dashboard.destroy');
-
+Route::get('dashboard/edit/{post}','App\Http\Controllers\DashboardController@edit')->name('dashboard.edit');
+Route::post('dashboard/edit/{post}','App\Http\Controllers\DashboardController@update')->name('dashboard.update');
 
 Route::post('logout','App\Http\Controllers\LogoutController@deauth')->name('logout');
 

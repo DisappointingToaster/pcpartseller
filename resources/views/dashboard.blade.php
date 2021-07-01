@@ -18,6 +18,10 @@
                                 @method('DELETE')
                                 <button type="submit" class="text-blue-500 ">Delete</button>
                             </form>
+                            <form action="{{route('dashboard.edit',$post)}}" method="get">
+                                @csrf
+                                <button type="submit" class="text-blue-500 ">Edit</button>
+                            </form>
                         </div>
                     </div>
                     

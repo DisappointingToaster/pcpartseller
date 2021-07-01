@@ -12,6 +12,15 @@
                             <p class="mb-2 px-6">{!!nl2br(e($post->body))!!} </p>
                         </div>
                     </div>
+                    @auth
+                        @if (auth()->user()->role==='Admin')
+                            <form action="{{route('dashboard.destroy',$post)}}" method="post">
+                              @csrf
+                                @method('DELETE')
+                                <button type="submit" class="text-blue-500 ">Delete</button>
+                         </form>   
+                        @endif   
+                    @endauth
                     
                 @endforeach
                 {{$posts->links()}}
