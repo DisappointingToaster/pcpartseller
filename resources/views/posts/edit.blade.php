@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="flex justify-center">
-        <div class="w-8/12 bg-white p-6 rounded-lg flex">
+        <div class="w-8/12 bg-gray-400 p-6 rounded-lg flex">
             <form action="{{route('dashboard.edit',$post)}}" method="POST" class="mb-4" enctype="multipart/form-data">
                 @csrf
             <div class="flex">
