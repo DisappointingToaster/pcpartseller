@@ -10,8 +10,13 @@
  'delete'=>'Delete',
  'imageSelect'=>"Select your image:",
  'postPost'=>"Publish",
- 'textfield'=>"Your text here"
- 
- 
+ 'textfield'=>"Your text here",
+ 'interested'=>"I'm interested",
+ 'notInterested'=>"I'm not interested",
+ 'totalI'=>'Total interested people:',
+ 'arePosts'=>'There are no posts',
+ 'email'=>'Email',
+ 'password'=>'Password',
+ 'npassword'=>'Password again'
  ]
 ?>

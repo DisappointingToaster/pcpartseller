@@ -23,4 +23,5 @@ Route::get('posts','App\Http\Controllers\PostController@index')->name('posts');
 Route::post('posts','App\Http\Controllers\PostController@store');
 
 Route::get('/lang/{lang}', 'App\Http\Controllers\LocalizationController@index');
-
+Route::post('/posts/{post}/likes','App\Http\Controllers\PostLikeController@store')->name('posts.like');
+Route::delete('/posts/{post}/likes','App\Http\Controllers\PostLikeController@destroy')->name('posts.like');

@@ -10,6 +10,13 @@
  'delete'=>'Dzēst',
  'imageSelect'=>"Izvēlietes bildi:",
  'postPost'=>"Publicēt",
- 'textfield'=>"Jūsu teksts šeit"
+ 'textfield'=>"Jūsu teksts šeit",
+ 'interested'=>"Esmu interesēts",
+ 'notInterested'=>"Neesmu interesēts",
+ 'totalI'=>'Kopā ieinteresēti cilvēki:',
+ 'arePosts'=>'Nav sludinājumi',
+ 'email'=>'Epasts',
+ 'password'=>'Parole',
+ 'npassword'=>'Parole atkal'
  ]
 ?>

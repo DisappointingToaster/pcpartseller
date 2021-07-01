@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="flex justify-center">
-        <div class="w-10/12 bg-white p-6 rounded-lg">
+        <div class="w-10/12 bg-gray-400 p-6 rounded-lg">
             {{$user->name}}
             @if($posts->count())
                 @foreach ($posts as $post)
@@ -29,7 +29,7 @@
                 @endforeach
                 {{$posts->links()}}
             @else
-                <p>There are no posts</p>
+                <p>{{ __('lang.arePosts') }}</p>
             @endif
         </div>
     </div>
